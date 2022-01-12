@@ -3,28 +3,26 @@ import "./App.css";
 import Card from "./components/card/Card";
 
 function App() {
-  const [data, setData] = useState(0);
-  console.log(data);
+  const [data, setData] = useState();
   const sendDataToChild = () => setData(getFetch());
+
+  // function parser(index) {
+  //   let passName = data[index].MountainPassName;
+  // }
+
+  const customelevation = () => data[3].ElevationInFeet;
+  const [elevation, setElevation] = useState();
 
   const getFetch = () =>
     fetch(
       //fetch call here
+
       {}
     )
       .then((response) => response.json())
       .then((response) => {
-        // console.log(response[0]);
-        return response.length;
-
-        // let passName = response[12].MountainPassName;
-        // let westbound = response[12].RestrictionTwo.RestrictionText;
-        //
-        // console.log(`Pass: ${passName} :  ${westbound}`);
-        // console.log(response[12]);
-        // setData(response);
-        // return response;
-        //
+        // console.log(response);
+        setData(response);
       })
       .catch((err) => {
         console.error(err);
@@ -33,11 +31,13 @@ function App() {
   return (
     <div className="App">
       <div className="CardHolder">
-        <Card passname="Stevens Pass" />
-        <Card passname="Snoqualmie" />
-        <Card passname="Blewitt" />
+        <Card PassName="poop" ele={elevation} />
+
         <button onClick={() => sendDataToChild()}>send data</button>
-        <button onClick={() => setData(getFetch)}>display data</button>
+        <button onClick={() => console.log(data)}>display data</button>
+        <button onClick={() => setElevation(customelevation)}>
+          update new data
+        </button>
       </div>
     </div>
   );
