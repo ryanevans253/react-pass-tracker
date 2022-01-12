@@ -2,23 +2,16 @@ import { useState } from "react";
 import "./card.css";
 
 function Card(props) {
-  // console.log(props.object);
-
-  // const [id, setId] = useState(null);
-
-  // let newdata = props.object;
-
-  // console.log(newdata[id]);
-
-  // const [roadCondition, setRoadCondition] = useState(
-  //   props.object[3].RoadCondition
-  // );
+  const id = props.passID;
+  console.log(props.object[1].WeatherCondition);
+  // console.log(props.passID);
 
   return (
     <div className="box">
-      <h4>Name: {props.passName}</h4>
-      <p>Elevation: {props.elevation}</p>
-      <p>Temperature: {props.temperature}</p>
+      <h4>Name: {props.object[id].MountainPassName}</h4>
+      <p>Elevation: {props.object[id].ElevationInFeet}</p>
+      {/* <p>Temperature: {props.object[id].WeatherCondition}</p>
+      <p>Travel Advisory Active: {props.object[id].TravelAdvisoryActive}</p> */}
       {/* <p>other data: {roadCondition}</p> */}
     </div>
   );
