@@ -4,15 +4,13 @@ import Card from "./components/card/Card";
 
 function App() {
   const [data, setData] = useState();
-  const sendDataToChild = () => setData(getFetch());
+  const [passName, setPassname] = useState("Name");
+  const [elevation, setElevation] = useState(50);
 
-  ///working section
-  const [passName, setPassname] = useState();
-
-  ///
-
-  const customelevation = () => data[3].ElevationInFeet;
-  const [elevation, setElevation] = useState();
+  function updateAll() {
+    setPassname(data[0].MountainPassName);
+    setElevation(data[0].ElevationInFeet);
+  }
 
   const getFetch = () =>
     fetch(
@@ -22,26 +20,27 @@ function App() {
     )
       .then((response) => response.json())
       .then((response) => {
-        // console.log(response);
         setData(response);
       })
+
       .catch((err) => {
         console.error(err);
       });
 
-  useEffect(() => sendDataToChild(), []);
-  // sendDataToChild(); // testing this out
+  useEffect(() => setData(getFetch()), []); // to only update the data once.
+
   return (
     <div className="App">
       <div className="CardHolder">
-        <Card PassName="poop" ele={elevation} />
-        <Card passn={() => setPassname(data[4].MountainPassName)} />
+        <Card
+          idNum={2}
+          passName={passName}
+          elevation={elevation}
+          temperature="50"
+          object={data}
+        />
 
-        <button onClick={() => sendDataToChild()}>send data</button>
-        <button onClick={() => console.log(data)}>display data</button>
-        <button onClick={() => setElevation(customelevation)}>
-          update new data
-        </button>
+        <button onClick={() => updateAll()}>update data</button>
       </div>
     </div>
   );
