@@ -3,9 +3,8 @@ import "./card.css";
 function Card(props) {
   return (
     <div className="box">
-      <h1 className="title">{props.ele}</h1>
-      <p>More info here</p>
-      {/* <p>{props.sendDataToChild}</p> */}
+      <h1 className="title">{props.passn}</h1>
+      <p>More info: {props.ele}</p>
     </div>
   );
 }

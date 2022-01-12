@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./components/card/Card";
 
@@ -6,9 +6,10 @@ function App() {
   const [data, setData] = useState();
   const sendDataToChild = () => setData(getFetch());
 
-  // function parser(index) {
-  //   let passName = data[index].MountainPassName;
-  // }
+  ///working section
+  const [passName, setPassname] = useState();
+
+  ///
 
   const customelevation = () => data[3].ElevationInFeet;
   const [elevation, setElevation] = useState();
@@ -28,10 +29,13 @@ function App() {
         console.error(err);
       });
 
+  useEffect(() => sendDataToChild(), []);
+  // sendDataToChild(); // testing this out
   return (
     <div className="App">
       <div className="CardHolder">
         <Card PassName="poop" ele={elevation} />
+        <Card passn={() => setPassname(data[4].MountainPassName)} />
 
         <button onClick={() => sendDataToChild()}>send data</button>
         <button onClick={() => console.log(data)}>display data</button>
