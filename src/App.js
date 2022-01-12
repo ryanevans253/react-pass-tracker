@@ -3,6 +3,8 @@ import "./App.css";
 import Card from "./components/card/Card";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   const [data, setData] = useState();
   const [passName, setPassname] = useState("Name");
   const [elevation, setElevation] = useState(50);
@@ -21,6 +23,8 @@ function App() {
       .then((response) => response.json())
       .then((response) => {
         setData(response);
+        console.log(response[3]);
+        setIsLoading(false);
       })
 
       .catch((err) => {
@@ -28,6 +32,10 @@ function App() {
       });
 
   useEffect(() => setData(getFetch()), []); // to only update the data once.
+
+  if (isLoading) {
+    return <div className="App">Loading...</div>;
+  }
 
   return (
     <div className="App">
@@ -47,3 +55,5 @@ function App() {
 }
 
 export default App;
+
+//need to get everything out of this level. send the data and an ID number to the card and parse from there.
