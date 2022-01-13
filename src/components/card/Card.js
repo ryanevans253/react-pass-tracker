@@ -19,7 +19,7 @@ function Card(props) {
   return (
     <div className="box">
       <h4>{passName}</h4>
-      <h1>{temperature}</h1>
+      <text className="title">{temperature}</text>
       <p>Elevation: {elevation}</p>
       <p>Weather: {weather}</p>
       <p>Travel advisory: {travelAdvisory}</p>

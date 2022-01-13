@@ -1,6 +1,6 @@
 .smallbox {
   border-radius: 0.5em;
-  min-width: 250px;
+  min-width: 30%;
   text-align: center;
   margin: 15px;
   height: 13vh;
@@ -8,7 +8,7 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 .title {
-  font-size: 25px;
+  font-size: 5rem;
   font-weight: 800;
 }
 
