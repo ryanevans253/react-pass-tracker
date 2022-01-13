@@ -31,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="docTitle">Washington State Pass Report</div>
       <div className="CardHolder">
         <Card passID={12} object={data} />
         <Card passID={11} object={data} />
