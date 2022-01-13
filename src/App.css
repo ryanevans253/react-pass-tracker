@@ -1,4 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Sora&display=swap");
+.background {
+  background: url("./components/passimg.jpg") fixed no-repeat center;
+  background-size: cover;
+  overflow-x: hidden;
+}
 .App {
+  font-family: "Montserrat", sans-serif;
+
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
@@ -9,15 +17,16 @@
 
 .CardHolder {
   width: 80vw;
-  height: 50vh;
-  /* align-items: center; */
+  margin-top: 7%;
   justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
 }
 
 .docTitle {
-  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  margin-top: 7%;
   font-size: xx-large;
-  top: 10%;
+  text-align: center;
 }
