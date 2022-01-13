@@ -6,14 +6,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState();
 
-  // function updateAll() {
-  //   setPassname(data[0].MountainPassName);
-  //   setElevation(data[0].ElevationInFeet);
-  // }
-
   const getFetch = () =>
     fetch(
       //fetch call here
+
       {}
     )
       .then((response) => response.json())
@@ -36,10 +32,9 @@ function App() {
   return (
     <div className="App">
       <div className="CardHolder">
-        <Card passID={2} object={data} />
-        <Card passID={5} object={data} />
-        <Card passID={7} object={data} />
-        <Card passID={8} object={data} />
+        <Card passID={12} object={data} />
+        <Card passID={11} object={data} />
+        <Card passID={0} object={data} />
       </div>
     </div>
   );
@@ -48,3 +43,5 @@ function App() {
 export default App;
 
 //need to get everything out of this level. send the data and an ID number to the card and parse from there.
+
+//list of conditions to set pictures to [Raining lightly, raining, overcast skies ]

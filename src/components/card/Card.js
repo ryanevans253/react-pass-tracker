@@ -3,16 +3,25 @@ import "./card.css";
 
 function Card(props) {
   const id = props.passID;
-  console.log(props.object[1].WeatherCondition);
-  // console.log(props.passID);
+
+  const passName = props.object[id].MountainPassName;
+  const elevation = props.object[id].ElevationInFeet;
+  let weather = props.object[id].WeatherCondition;
+  let travelAdvisory = props.object[id].TravelAdvisoryActive;
+
+  //validations
+  if (!weather || weather === "") {
+    weather = "unavailable";
+  }
+
+  travelAdvisory = travelAdvisory ? "Yes" : "No";
 
   return (
     <div className="box">
-      <h4>Name: {props.object[id].MountainPassName}</h4>
-      <p>Elevation: {props.object[id].ElevationInFeet}</p>
-      {/* <p>Temperature: {props.object[id].WeatherCondition}</p>
-      <p>Travel Advisory Active: {props.object[id].TravelAdvisoryActive}</p> */}
-      {/* <p>other data: {roadCondition}</p> */}
+      <h4>{passName}</h4>
+      <p>Elevation: {elevation}</p>
+      <p>Weather: {weather}</p>
+      <p>Travel advisory: {travelAdvisory}</p>
     </div>
   );
 }
