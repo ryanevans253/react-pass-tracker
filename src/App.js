@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./components/card/Card";
 import Mini from "./components/mini/Mini";
+import Modal from "react-modal";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState();
+
+  //for modal
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const getFetch = () =>
     fetch(
@@ -51,6 +55,12 @@ function App() {
           <Mini passID={13} object={data} />
           <Mini passID={14} object={data} />
         </div>
+        {/* modal */}
+        <Modal isOpen={modalIsOpen}>
+          <h2>Title</h2>
+          <p>subtitle</p>
+          <button>click me</button>
+        </Modal>
       </div>
     </div>
   );
