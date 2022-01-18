@@ -4,12 +4,18 @@ import Card from "./components/card/Card";
 import Mini from "./components/mini/Mini";
 import Modal from "react-modal";
 
+Modal.setAppElement("#root");
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState();
 
   //for modal
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  // for second page
+
+  const [fullPageOpen, setFullPageOpen] = useState(false);
 
   const getFetch = () =>
     fetch(
@@ -38,6 +44,7 @@ function App() {
     <div className="background">
       <div className="App">
         <div className="docTitle">Washington State Pass Report</div>
+        <button onClick={() => setFullPageOpen(true)}>open full page</button>
         <div className="CardHolder">
           <Card passID={12} object={data} />
           <Card passID={11} object={data} />
@@ -56,10 +63,13 @@ function App() {
           <Mini passID={14} object={data} />
         </div>
         {/* modal */}
-        <Modal isOpen={modalIsOpen}>
-          <h2>Title</h2>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => setModalIsOpen(false)}
+        >
+          <p>Title</p>
           <p>subtitle</p>
-          <button>click me</button>
+          <button onClick={() => setModalIsOpen(false)}>click me</button>
         </Modal>
       </div>
     </div>
