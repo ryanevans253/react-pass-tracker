@@ -1,3 +1,56 @@
 .box {
   border: black 1px solid;
+  background: none;
+}
+
+.basic-grid-sm {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-sm {
+  padding: 0.5rem;
+  /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  border-radius: 0.5rem; */
+  background: no;
+}
+.two-columns-sm {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: minmax(50px, 1fr);
+  gap: 1rem;
+}
+
+.info {
+  display: grid;
+}
+
+.icon {
+  width: 40%;
+  margin-top: 10px;
+}
+/* fonts */
+
+.header {
+  font-size: 2rem;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.number {
+  font-size: 4rem;
+}
+.number-sm {
+  font-size: 1.5rem;
+}
+
+.center {
+  text-align: center;
 }

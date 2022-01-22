@@ -7,15 +7,12 @@ export default function FullPage() {
   return (
     <div>
       <div className="wrapper">
-        <h1>Full page</h1>
-        <Link to="/"> 1day weather below here:</Link>
         <section className="basic-grid">
           <div className="two-columns">
-            <div className="grid">
-              <h1>City Name</h1>
-              <p>description</p>
+            <div className="grid background txt-white">
+              <Weather1day />
             </div>
-            <div className="grid">
+            <div className="grid ">
               <h1>Webcam</h1>
               <p>Photo</p>
             </div>
