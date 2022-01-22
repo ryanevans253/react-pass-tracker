@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Route, BrowserRouter as Router } from "react-router-dom";
 import Weather1day from "../components/weather1day/Weather1day";
+import Forecast4 from "../components/4day/Forecast4";
 import "./fullpage.css";
 
 export default function FullPage() {
@@ -28,9 +29,11 @@ export default function FullPage() {
               nulla pariatur.
             </p>
           </div>
-          <div className="grid weather5day">
-            <h3>Weather section</h3>
-            <p>Five days of weather here</p>
+          <div className="basic-grid grid weather5day">
+            <Forecast4 />
+            <Forecast4 />
+            <Forecast4 />
+            <Forecast4 />
           </div>
         </section>
       </div>
