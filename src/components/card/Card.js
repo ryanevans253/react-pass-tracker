@@ -1,4 +1,5 @@
 import "./card.css";
+import { Link } from "react-router-dom";
 
 function Card(props) {
   const id = props.passID;
@@ -19,7 +20,9 @@ function Card(props) {
   return (
     <div className="box">
       <h4>{passName}</h4>
-      <text className="title">{temperature}</text>
+      <p className="title">{temperature}</p>
+      {/* //changed this from text tag and broke css */}
+      <Link to="/details">Details</Link>
       <p>Elevation: {elevation}</p>
       <p>Weather: {weather}</p>
       <p>Travel advisory: {travelAdvisory}</p>

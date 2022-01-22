@@ -4,6 +4,11 @@ import Card from "./components/card/Card";
 import Mini from "./components/mini/Mini";
 import Modal from "react-modal";
 
+//react router
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FullPage from "./Pages/FullPage";
+import SecondPage from "./Pages/SecondPage";
+
 Modal.setAppElement("#root");
 
 function App() {
@@ -62,6 +67,8 @@ function App() {
           <Mini passID={13} object={data} />
           <Mini passID={14} object={data} />
         </div>
+        {/* router */}
+
         {/* modal */}
         <Modal
           isOpen={modalIsOpen}

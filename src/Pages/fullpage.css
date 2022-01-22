@@ -1,0 +1,32 @@
+.wrapper {
+  width: 80vw;
+  height: 100vh;
+  margin: auto;
+}
+
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-rows: 350px;
+
+  gap: 1rem;
+}
+
+.alert {
+  display: grid;
+}
+
+.weather5day {
+  display: grid;
+  grid-template-rows: minmax(150px, 1fr);
+}
+/* 465x350 px for cam window */
