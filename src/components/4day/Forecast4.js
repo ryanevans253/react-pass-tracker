@@ -4,10 +4,10 @@ import icon from "./snow.png";
 export default function Forecast4() {
   return (
     <div>
-      <div>
-        <p>Date</p>
+      <div className="grid">
+        <p>Jan 23</p>
         <img src={icon} className="icon" />
-        <p>Low / High</p>
+        <p>62 / 74</p>
       </div>
     </div>
   );

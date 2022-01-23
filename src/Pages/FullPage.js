@@ -3,6 +3,7 @@ import { Link, Route, BrowserRouter as Router } from "react-router-dom";
 import Weather1day from "../components/weather1day/Weather1day";
 import Forecast4 from "../components/4day/Forecast4";
 import "./fullpage.css";
+import Webcam from "../components/webcam/Webcam";
 
 export default function FullPage() {
   return (
@@ -14,8 +15,9 @@ export default function FullPage() {
               <Weather1day />
             </div>
             <div className="grid ">
-              <h1>Webcam</h1>
-              <p>Photo</p>
+              {/* <h1>Webcam</h1>
+              <p>Photo</p> */}
+              <Webcam />
             </div>
           </div>
           <div className="grid alert">
