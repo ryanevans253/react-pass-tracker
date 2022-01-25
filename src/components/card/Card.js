@@ -26,10 +26,6 @@ function Card(props) {
       <p>Elevation: {elevation}</p>
       <p>Weather: {weather}</p>
       <p>Travel advisory: {travelAdvisory}</p>
-      {/* <button onClick={() => setModalIsOpen(true)}>
-        More Information
-      </button>{" "}
-      //just starting to figure out how to connect the child button to */}
     </div>
   );
 }

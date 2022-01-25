@@ -20,21 +20,27 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/details" element={<FullPage />} />
+        <Route
+          path="/stevens-pass"
+          element={
+            <FullPage lat="47.7459" lon="-121.0891" passName="Stevens Pass" />
+          }
+        />
+        <Route
+          path="/snoqualmie"
+          element={
+            <FullPage
+              lat="47.3923"
+              lon="-121.4001"
+              passName="Snoqualmie Pass"
+            />
+          }
+        />
       </Routes>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-function About() {
-  return (
-    <div>
-      <h1>ryan</h1>
-      <p>about page</p>
-      <Link to="/">go home</Link>
-    </div>
-  );
-}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

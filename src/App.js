@@ -2,44 +2,38 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./components/card/Card";
 import Mini from "./components/mini/Mini";
-import Modal from "react-modal";
 
 //react router
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FullPage from "./Pages/FullPage";
 import SecondPage from "./Pages/SecondPage";
 
-Modal.setAppElement("#root");
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState();
-
-  //for modal
-  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   // for second page
 
   const [fullPageOpen, setFullPageOpen] = useState(false);
 
-  const getFetch = () =>
+  //pass data section
+  const getPassData = () =>
     fetch(
       //fetch call here
-
       {}
     )
       .then((response) => response.json())
       .then((response) => {
         setData(response);
-        console.log(response);
         setIsLoading(false);
+        console.log(response);
       })
 
       .catch((err) => {
         console.error(err);
       });
 
-  useEffect(() => setData(getFetch()), []); // to only update the data once.
+  useEffect(() => setData(getPassData()), []); // to only update the data once.
 
   if (isLoading) {
     return <div className="App">Loading...</div>;
@@ -49,7 +43,6 @@ function App() {
     <div className="background">
       <div className="App">
         <div className="docTitle">Washington State Pass Report</div>
-        <button onClick={() => setFullPageOpen(true)}>open full page</button>
         <div className="CardHolder">
           <Card passID={12} object={data} />
           <Card passID={11} object={data} />
@@ -68,16 +61,6 @@ function App() {
           <Mini passID={14} object={data} />
         </div>
         {/* router */}
-
-        {/* modal */}
-        <Modal
-          isOpen={modalIsOpen}
-          onRequestClose={() => setModalIsOpen(false)}
-        >
-          <p>Title</p>
-          <p>subtitle</p>
-          <button onClick={() => setModalIsOpen(false)}>click me</button>
-        </Modal>
       </div>
     </div>
   );

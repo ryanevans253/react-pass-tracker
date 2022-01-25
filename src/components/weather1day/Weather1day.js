@@ -3,19 +3,23 @@ import "./weather1day.css";
 import icon from "./snow.png";
 
 export default function Weather1day(props) {
+  const date = new Date(props.date * 1000).toDateString();
+
   return (
     <div>
       <div className="basic-grid-sm">
         <div className="two-columns-sm">
           <div className="grid-sm">
-            <p className="header no-margin">San Francisco</p>
-            <p className="no-margin">January 23rd, 2022</p>
+            <p className="header no-margin">{props.passName}</p>
+            <p className="no-margin">{date}</p>
 
             <img className="icon" src={icon} />
           </div>
           <div className="grid-sm center">
-            <p className="number no-margin"> 75°F </p>
-            <p className="no-margin number-sm">44°/81°</p>
+            <p className="number no-margin"> {props.temp.toFixed(0)}°F </p>
+            <p className="no-margin number-sm">
+              {props.min.toFixed(0)}°/{props.max.toFixed(0)}°
+            </p>
           </div>
         </div>
 

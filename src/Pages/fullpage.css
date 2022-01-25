@@ -40,3 +40,8 @@
 .txt-white {
   color: white;
 }
+
+.no-padding {
+  padding: 0px;
+  overflow: hidden;
+}
