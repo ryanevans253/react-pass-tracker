@@ -11,7 +11,7 @@ export default function FullPage(props) {
 
   let [weatherData, setWeatherData] = useState();
 
-  const key = ""; ///key goes here
+  const key = "2563201543a0702459fa6bb75ca71c00"; ///key goes here
 
   const passName = props.passName;
   const lon = props.lon;
@@ -73,22 +73,27 @@ export default function FullPage(props) {
           </div>
           <div className="grid alert">
             <h4>Alert information</h4>
-            <p>{weatherData.current.temp}</p>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
+            <p>Eastbound: Traction tires advised.</p>
+            <p>Westbound: Traction tires advised.</p>
           </div>
-          <div className="basic-grid grid weather5day">
-            <Forecast4 />
-            <Forecast4 />
-            <Forecast4 />
-            <Forecast4 />
+          <div className="basic-grid grid weather5day no-shadow">
+            <Forecast4
+              max={weatherData.daily[1].temp.max}
+              min={weatherData.daily[1].temp.min}
+            />
+            <Forecast4
+              max={weatherData.daily[2].temp.max}
+              min={weatherData.daily[2].temp.min}
+            />
+            <Forecast4
+              max={weatherData.daily[3].temp.max}
+              min={weatherData.daily[3].temp.min}
+            />
+            <Forecast4
+              max={weatherData.daily[4].temp.max}
+              min={weatherData.daily[4].temp.min}
+            />
             {/* <GetWeather /> */}
           </div>
         </section>

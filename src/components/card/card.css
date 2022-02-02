@@ -1,4 +1,4 @@
-.box {
+.box-grey-bck {
   border-radius: 0.5em;
   min-width: 30%;
   text-align: center;
@@ -6,4 +6,8 @@
   height: 50vh;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.spacing {
+  margin-bottom: 0px;
 }

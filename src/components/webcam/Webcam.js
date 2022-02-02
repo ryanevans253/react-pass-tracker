@@ -7,7 +7,8 @@ export default function Webcam() {
     <div>
       <img
         className="webcam"
-        src={"https://images.wsdot.wa.gov//nc//097vc16375.jpg"}
+        // src={"https://images.wsdot.wa.gov//nc//097vc16375.jpg"}
+        src={"https://images.wsdot.wa.gov//nc//002vc06430.jpg"}
       />
     </div>
   );

@@ -1,3 +1,9 @@
+body {
+  background-image: url("../components/mountain-blue.jpg");
+  background-position: fixed;
+  background-size: cover;
+}
+
 .wrapper {
   width: 80vw;
   height: 100vh;
@@ -25,12 +31,13 @@
 }
 
 .alert {
-  background-color: rgba(170, 26, 26, 0.5);
+  background-color: rgba(255, 116, 109, 0.9);
 }
 
 .weather5day {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background: none;
 }
 
 .background {
@@ -44,4 +51,8 @@
 .no-padding {
   padding: 0px;
   overflow: hidden;
+}
+
+.no-shadow {
+  box-shadow: none;
 }

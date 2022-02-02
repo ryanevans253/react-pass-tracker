@@ -26,8 +26,8 @@ export default function Weather1day(props) {
         <div className="info no-margin">
           <p className="no-margin">Elev. 4058</p>
           <p className="no-margin">Travel Advisory: YES</p>
-          <p className="no-margin">Road Condition</p>
-          <p className="no-margin">Travel advisory active? Y/N</p>
+          {/* <p className="no-margin">Road Condition</p> */}
+          <p className="no-margin">Travel advisory active? Y</p>
         </div>
       </div>
     </div>

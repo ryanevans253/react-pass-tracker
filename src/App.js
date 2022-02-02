@@ -20,6 +20,7 @@ function App() {
   const getPassData = () =>
     fetch(
       //fetch call here
+
       {}
     )
       .then((response) => response.json())

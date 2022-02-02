@@ -18,11 +18,11 @@ function Card(props) {
   travelAdvisory = travelAdvisory ? "Yes" : "No";
 
   return (
-    <div className="box">
+    <div className="box-grey-bck">
       <h4>{passName}</h4>
-      <p className="title">{temperature}</p>
+      <p className="title spacing">{temperature}</p>
       {/* //changed this from text tag and broke css */}
-      <Link to="/details">Details</Link>
+      <Link to="/stevens-pass">Details</Link>
       <p>Elevation: {elevation}</p>
       <p>Weather: {weather}</p>
       <p>Travel advisory: {travelAdvisory}</p>
