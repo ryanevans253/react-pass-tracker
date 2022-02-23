@@ -19,22 +19,14 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/details" element={<FullPage />} />
+        {/* <Route path="/details" element={<FullPage />} /> */}
         <Route
           path="/stevens-pass"
-          element={
-            <FullPage lat="47.7459" lon="-121.0891" passName="Stevens Pass" />
-          }
+          element={<FullPage id={0} passName="Stevens Pass" />}
         />
         <Route
           path="/snoqualmie"
-          element={
-            <FullPage
-              lat="47.3923"
-              lon="-121.4001"
-              passName="Snoqualmie Pass"
-            />
-          }
+          element={<FullPage id={1} passName="Snoqualmie Pass" />}
         />
       </Routes>
     </Router>

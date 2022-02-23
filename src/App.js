@@ -14,13 +14,12 @@ function App() {
 
   // for second page
 
-  const [fullPageOpen, setFullPageOpen] = useState(false);
+  // const [fullPageOpen, setFullPageOpen] = useState(false);
 
   //pass data section
   const getPassData = () =>
     fetch(
       //fetch call here
-      `https://aqueous-refuge-20676.herokuapp.com/http://wsdot.wa.gov/Traffic/api/MountainPassConditions/MountainPassConditionsREST.svc/GetMountainPassConditionsAsJson?AccessCode=4755fbbd-26fa-4f44-a3a7-dd981eb72c12`,
 
       {}
     )
